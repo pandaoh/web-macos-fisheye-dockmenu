@@ -1,0 +1,142 @@
+/**
+* @Author doubleam
+* @email hxbpandaoh@163.com
+**/
+* {
+  padding: 0;
+  margin: 0;
+}
+
+/**
+* container css
+**/
+#menu-container {
+  display: flex;
+  width: 100vw;
+  height: 8vh;
+  background-color: #ccc;
+  box-sizing: border-box;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  position: fixed;
+  z-index: 99999;
+}
+.menu-bottom {
+  bottom: 0 !important;
+  left: 0 !important;
+}
+.menu-top {
+  top: 0 !important;
+  left: 0 !important;
+}
+.menu-right, .menu-left {
+  top: 0 !important;
+  width: 8vh !important;
+  height: 100vh !important;
+  flex-direction: column !important;
+}
+.menu-left {
+  left: 0 !important;
+}
+.menu-right {
+  right: 0 !important;
+}
+
+/**
+* menu css
+**/
+.dock-menu {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+.menu-right .dock-menu, .menu-left .dock-menu {
+  flex-direction: column !important;
+}
+
+/**
+* menu-item css
+**/
+.dock-menu .menu-item {
+  /*default size*/
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  border-radius: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  text-decoration: none;
+  background-color: rgba(0,0,0,0.05);
+  color: black;
+}
+.dock-menu.before-transition .menu-item {
+  /* reset size */
+  width: 50px;
+  height: 50px;
+  transition: 0.1s;
+}
+.menu-item:hover{
+  background-color: chocolate;
+  transition: 0.15s;
+}
+
+/**
+* menu-item-icon css
+**/
+.menu-item-icon {
+  width: 100%;
+  height: 100%;
+  font-size: 1.8em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* img box-reflect css */
+  /*  -webkit-box-reflect: below 1px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(0.66, transparent), to(rgba(255, 255, 255, .5)));*/
+}
+.menu-item:hover .menu-item-icon {
+  color: white !important;
+}
+
+/**
+* item-title css
+**/
+.menu-item-icon:before{
+  content: attr(item-title);
+  position: absolute;
+  opacity: 0;
+  transition: opacity 0.15s;
+  pointer-events: none;
+  font-weight: 600;
+  font-size: large;
+  color: #5B5B5B;
+}
+.menu-top .menu-item-icon:before {
+  top: 100% !important;
+  left: 50% !important;
+  transform: translate(-50%, 0) !important;
+}
+.menu-bottom .menu-item-icon:before {
+  bottom: 100% !important;
+  left: 50% !important;
+  transform: translate(-50%, 0) !important;
+}
+.menu-right .menu-item-icon:before {
+  right: 100% !important;
+  top: 50% !important;
+  transform: translate(0, -50%) !important;
+}
+.menu-left .menu-item-icon:before {
+  left: 100% !important;
+  top: 50% !important;
+  transform: translate(0, -50%) !important;
+}
+.menu-item:hover .menu-item-icon:before ,.menu-item:active .menu-item-icon:before {
+  opacity: 1;
+}

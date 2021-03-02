@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="http://a.biugle.cn/favicon.ico" >
+    <title>biugle-macos-dockmenu-menu(fisheye-menu) power by html-css-js-fontawesome</title>
+    <link rel="stylesheet" href="dockmenu.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.2/css/all.min.css"/>
+  </head>
+  <body>
+    <h3 style="text-align: center;margin: 300px auto;">biugle-macos-dockmenu-menu(fisheye-menu) power by html-css-js-fontawesome</h3>
+    <nav id='menu-container'>
+      <div class='dock-menu'>
+        <a class="menu-item" href='#1' title="title1">
+          <div item-title="steam" class="menu-item-icon">
+            <i class="fab fa-steam fa-fw"></i>
+          </div>
+        </a>
+        <a class="menu-item" href='#2' title="title2">
+          <div item-title="unity" class="menu-item-icon">
+            <i class="fab fa-unity fa-fw"></i>
+          </div>
+        </a>
+        <a class="menu-item" href='#3' title="title3">
+          <div item-title="weibo" style="color: #ef6a40;" class="menu-item-icon">
+            <i class="fab fa-weibo  fa-fw"></i>
+          </div>
+        </a>
+        <a class="menu-item" href='#4'  title="title4">
+          <div item-title="weixin" style="color: green;" class="menu-item-icon">
+            <i class="fab fa-weixin fa-fw"></i>
+          </div>
+        </a>
+        <a class="menu-item" href='#5' title="title5">
+          <div item-title="zhihu" style="color: blue;" class="menu-item-icon">
+            <i class="fab fa-zhihu fa-fw"></i>
+          </div>
+        </a>
+        <a class="menu-item" href='#6' title="title6">
+          <div item-title="youtube" style="color: red;" class="menu-item-icon">
+            <i class="fab fa-youtube fa-fw"></i>
+          </div>
+        </a>
+        <a class="menu-item" href='#7' title="title7">
+          <div item-title="windows" class="menu-item-icon">
+            <i class="fab fa-windows fa-fw"></i>
+          </div>
+        </a>
+        <a class="menu-item" href='#8' title="title8">
+          <div item-title="bootstrap" style="color: #673ab7;" class="menu-item-icon">
+            <i class="fab fa-bootstrap fa-fw"></i>
+          </div>
+        </a>
+        <a class="menu-item" href='#9' title="title9">
+          <div item-title="php" style="color: #2042ff;" class="menu-item-icon">
+            <i class="fab fa-php fa-fw"></i>
+          </div>
+        </a>
+        <a class="menu-item" href='#10' title="title10">
+          <div item-title="twitch" style="color: chocolate;" class="menu-item-icon">
+            <i class="fab fa-twitch fa-fw"></i>
+          </div>
+        </a>
+      </div>
+    </nav>
+    <script src='dockmenu.js'></script>
+    <script>
+      $dockMenu = new dockMenu({
+        position: 'bottom',
+        parent: '#menu-container',
+        el: '.dock-menu',
+        item: '.menu-item',
+        grow: 1.8,
+        transition: 100,
+        defaultMargin: 0,
+        alignLimit: 1.8,
+        justifyLimit: 1.8
+      });
+      $dockMenu.show();
+    </script>
+  </body>
+</html>
