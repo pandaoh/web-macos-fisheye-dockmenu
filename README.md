@@ -10,4 +10,4 @@
 
 > email: hxbpandaoh@163.com
 
-![](http://a.biugle.cn/img/example/dockmenu.png)
+![](./dockmenu.gif)
